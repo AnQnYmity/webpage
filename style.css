@@ -1,5 +1,5 @@
 html, body {
-  height: 100%;
+  min-height: 150%;
   margin: 0;
 }
 
@@ -10,17 +10,21 @@ body {
 .navigator {
     display: flex;
     position: absolute;
-    left: 500px;
+    white-space: nowrap;
+    left: 50px;
     top: 50px;
-    gap: 200px;
+    gap: 50px;
 }
 
 .navigator a {
-    font-size: 25px; 
+    color:rgb(32, 57, 221);
+    font-size:25px;
+    text-decoration: none;
 }
 
-.navigator a:hover {
-    text-decoration: rgb(0, 0, 0);
+.navigator a:visited {
+    color: rgb(32, 57, 221);
+    text-decoration:none;
 }
 
 .block {
@@ -45,7 +49,23 @@ body {
     font-size: 30px;
 }
 
-.block h2, .block p {
+.block h2, .block p, .block ul {
     margin-top: 0px;
-    margin-left: 150px;
+    margin-left: 180px;
+}
+
+#bg {
+    width: 150px;
+    height: auto;
+    object-fit: contain;
+    position: absolute;
+    left:0px;
+    top:200px;
+}
+
+#ark {
+    position:absolute;
+    left:700px;
+    top:830px;
+    z-index:9999;
 }

@@ -6,34 +6,75 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AnQnYmity Profile</title>
     <link rel="stylesheet" href="./style.css">
+    <audio id="ark" 
+           src="./kanoryo - Ark (Long.ver).mp3"
+           controls>
+    </audio>
 </head>
 <body>
     <nav class="navigator">
-        <a href="#header1">测试用1</a>
-        <a href="#header2">测试用2</a>
-        <a href="#header3">测试用3</a>
+        <a href="#header1">基本信息</a>
+        <a href="#header2">兴趣爱好</a>
+        <a href="#header3">想说的话</a>
+        <a href="#header4">大小目标</a>
     </nav>
     <div class="block">
         <div class="title">
-            <h1 id="HEADER">测试</h1>
-            <p id="HEADER_PARA">这是一个测试</p>
+            <h1 id="HEADER">箴言</h1>
+            <p id="HEADER_PARA"></p>
         </div>
-        <!--<img id="bg" src="" width="" height="" alt="">-->
-        <h2 id="header1">测试用1</h2>
+        
+        <img id="bg" 
+             src="C:\Users\aqy14\Desktop\all_code\HTML\webpage\Clock Paradox.jpg"
+             width="" height="" alt="">
+        <h2 id="header1">基本信息</h2>
+        
         <p id="para1">
-            施工中
-            即将完成
+            AnQnYmity, 原名□□□□□□□□。南京大学2023级本科生，就读于计算机科学与技术专业。<br>
+            生于2005，具体日期不详。<br>
+            联系方式：
         </p>
-        <h2 id="header2">测试用2</h2>
+        <ul class="contact">
+            <li>QQ: □□□□□□□□□□□，邮箱同号</li>
+            <li>Outlook: □□□□□□□□□□□□@outlook.com</li>
+            <li>Github: AnQnYmity</li>
+            <li>Gmail: □□□□□□□□□□□□□□□@gmail.com</li>
+        </ul>
+            
+        <h2 id="header2">兴趣爱好</h2>
         <p id="para2">
-            施工中
-            即将完成
+            爱打游戏。<br>
+            此外无。
         </p>
-        <h2 id="header3">测试用3</h2>
+        <h2 id="header3">想说的话</h2>
         <p id="para3">
-            施工中
-            即将完成
+            给自己：工欲善其事，必先利其器。<br>
+            给别人：团结、友爱、互帮、互助。
         </p>
+        <h2 id="header4">大小目标</h2>
+        <p id="para4">
+            想做的事太多，奈何人生苦短。
+        </p>
+        <ul>
+            <li>用<a href="#" id="playmusic">kanoryo - Ark</a>当背景音乐制作一个动画短片；</li>
+            <li>励志写下更多的code；</li>
+            <li>把我的小说在未来的这两年之间写完；</li>
+            <li>学会作曲，编曲；</li>
+            <li>以后也要继续维护这个网页；</li>
+            <li>毕业了找工作呢？考研呢？还是去做其他的呢？我也不知道。</li>
+        </ul>
     </div>
+
+    <script src="script.js"></script>
+    <script>
+        const mottoElem = document.getElementById("HEADER_PARA");
+        mottoElem.textContent = selectRandomMotto();
+        const link = document.getElementById("playmusic")
+        const ark = document.getElementById("ark")
+        link.addEventListener("click", function(event) {
+            event.preventDefault();
+            ark.play();
+        })
+    </script>
 </body>
 </html>
