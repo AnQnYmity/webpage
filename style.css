@@ -1,0 +1,51 @@
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+    background: linear-gradient(to bottom, #31d6f7 0%, #b7e3ef 100%);
+}
+
+.navigator {
+    display: flex;
+    position: absolute;
+    left: 500px;
+    top: 50px;
+    gap: 200px;
+}
+
+.navigator a {
+    font-size: 25px; 
+}
+
+.navigator a:hover {
+    text-decoration: rgb(0, 0, 0);
+}
+
+.block {
+    position:absolute;
+    top: 100px;
+    left: 60px;
+}
+
+.title {
+    display:flex;
+    margin-left:0px;
+    margin-top: 0px;
+}
+
+#HEADER {
+    font-size: 60px;
+}
+
+#HEADER_PARA {
+    margin-left: 30px;
+    margin-top: 75px;
+    font-size: 30px;
+}
+
+.block h2, .block p {
+    margin-top: 0px;
+    margin-left: 150px;
+}
