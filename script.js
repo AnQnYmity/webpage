@@ -12,3 +12,14 @@ function selectRandomMotto() {
     const index = Math.floor(Math.random() * n)
     return mottos[index]
 }
+
+document.querySelectorAll('#HEADER_PARA').forEach(el => {
+    const chars = el.textContent.split('');
+    el.textContent = '';
+    chars.forEach((ch, i) => {
+        const span = document.createElement('span');
+        span.textContent = ch;
+        span.style.animationDelay = (i * 0.1) + 's';
+        el.appendChild(span);
+    });
+});
