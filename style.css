@@ -1,10 +1,11 @@
 html, body {
-  min-height: 150%;
+  height: 100%;
   margin: 0;
 }
 
 body {
     background: linear-gradient(to bottom, #31d6f7 0%, #b7e3ef 100%);
+    background-attachment: fixed;;
 }
 
 .navigator {
@@ -40,7 +41,7 @@ body {
 }
 
 .box {
-    display: inline-block;
+    display: block;
     width: 1200px;
     padding: 16px 24px;
     border: 2px solid #ccc;
@@ -48,6 +49,18 @@ body {
     background-color: #88d7ff;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
     border-color: #88d7ff;
+}
+
+.picture_box {
+    float: left;
+    width: 150px;
+    padding: 16px 24px;
+    border: 2px solid #ccc;
+    border-radius: 12px;
+    background-color: #88d7ff;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+    border-color: #88d7ff;
+    margin-top: 50px;
 }
 
 #HEADER {
@@ -62,24 +75,39 @@ body {
     text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
 }
 
-.block h2, .block p, .block ul {
+#header1 {
+    float: left;
+    margin-left: 18px;
     margin-top: 40px;
-    margin-left: 180px;
 }
 
-#bg {
+#para1 {
+    margin-top: 80px;
+    margin-left: 220px;
+}
+
+#para2, #para3, #para4, #header2, #header3, #header4, .block ul {
+    margin-top: 40px;
+    margin-left: 220px;
+}
+
+.picture_box img {
     width: 150px;
     height: auto;
     object-fit: contain;
-    position: absolute;
+    /* position: absolute;
     left:0px;
-    top:280px;
+    top:280px; */
+}
+
+#no-dot {
+    list-style: none;
 }
 
 #ark {
-    position:absolute;
+    /* position:absolute;
     left:700px;
-    top:830px;
+    top:830px; */
     z-index:9999;
 }
 
@@ -87,7 +115,7 @@ body {
     display: inline-block;
     opacity: 0;
     transform: translateY(100px) rotate(90deg);
-    animation: throwChar 0.8s cubic-bezier(.2,.8,.2,1) forwards;
+    animation: throwChar 1s cubic-bezier(.2,.8,.2,1) forwards;
 }
 
 @keyframes throwChar {

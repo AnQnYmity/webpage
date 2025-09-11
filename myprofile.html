@@ -6,10 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AnQnYmity Profile</title>
     <link rel="stylesheet" href="./style.css">
-    <audio id="ark" 
-           src="./kanoryo - Ark (Long.ver).mp3"
-           controls>
-    </audio>
 </head>
 <body>
     <nav class="navigator">
@@ -26,10 +22,35 @@
             </div>
         </div>
         
-        <img id="bg" 
-             src="./Clock Paradox.jpg"
-             width="" height="" alt="">
-        <h2 id="header1">基本信息</h2>
+        <div class="picture_box">
+            <h3>喜欢的曲绘</h3>
+            <img id="Clock_Paradox" 
+                src="./assets/Clock Paradox.jpg"
+                width="" height="" alt="">
+            <img id="Ark"
+                 src="./assets/Ark.jpg"
+                 alt="">
+            <img id="anomaly"
+                 src="./assets/anomaly.jpg"
+                 alt="">
+            <img id="Der_Richter"
+                 src="./assets/Der Richter.png"
+                 alt="">
+            <img id="Destination"
+                 src="./assets/Destination.jpg"
+                 alt="">
+            <img id="PANDORA_PARADOXXX"
+                 src="./assets/PANDORA PARADOXXX.jpg"
+                 alt="">
+            <img id="SURREALISM"
+                 src="./assets/SURREALISM.jpg"
+                 alt="">
+            <img id="光"
+                 src="./assets/光.jpg"
+                 alt="">
+        </div>
+        
+        <h2 id="header1">基本信息</h2><br>
         
         <p id="para1">
             AnQnYmity, 原名□□□□□□□□。南京大学2023级本科生，就读于计算机科学与技术专业。<br>
@@ -58,6 +79,10 @@
             想做的事太多，奈何人生苦短。
         </p>
         <ul>
+            <li id="no-dot"><audio id="ark" 
+                src="./assets/kanoryo - Ark (Long.ver).mp3"
+                controls>
+            </audio></li>
             <li>用<a href="#" id="playmusic">kanoryo - Ark</a>当背景音乐制作一个动画短片；</li>
             <li>励志写下更多的code；</li>
             <li>把我的小说在未来的这两年之间写完；</li>
@@ -68,28 +93,5 @@
     </div>
 
     <script src="script.js"></script>
-    <script>
-        const mottoElem = document.getElementById("HEADER_PARA");
-        mottoElem.textContent = selectRandomMotto();
-        const link = document.getElementById("playmusic")
-        const ark = document.getElementById("ark")
-        link.addEventListener("click", 
-            function(event) {
-                event.preventDefault();
-                ark.play();
-            }
-        )
-
-        document.querySelectorAll('#HEADER_PARA').forEach(el => {
-        const chars = el.textContent.split('');
-        el.textContent = '';
-        chars.forEach((ch, i) => {
-            const span = document.createElement('span');
-            span.textContent = ch;
-            span.style.animationDelay = (i * 0.05) + 's';
-            el.appendChild(span);
-            });
-        });
-    </script>
 </body>
 </html>
