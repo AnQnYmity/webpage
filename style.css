@@ -1,11 +1,30 @@
 html, body {
-  height: 100%;
-  margin: 0;
+    height: 100%;
+    margin: 0;
+    scroll-behavior: smooth;
+}
+
+@font-face{
+    font-family: "KleeOne-Regular";
+    src:url(fonts/KleeOne-Regular.ttf) format(truetype);
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "KleeOne-SemiBold";
+    src:url(fonts/KleeOne-SemiBold.ttf) format(truetype);
+    font-style: normal;
+    font-weight: bold;
 }
 
 body {
     background: linear-gradient(to bottom, #31d6f7 0%, #b7e3ef 100%);
-    background-attachment: fixed;;
+    /* background: linear-gradient(to bottom, #3115cf 0%, #8684bc 100%); */
+    background-attachment: fixed;
+    font-family: "KleeOne-Regular", "Courier New", monospace;
+    font-size: larger;
+    color:rgb(12, 0, 240);
 }
 
 .navigator {
@@ -60,7 +79,7 @@ body {
     background-color: #88d7ff;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
     border-color: #88d7ff;
-    margin-top: 50px;
+    margin-top: 60px;
 }
 
 #HEADER {
@@ -78,11 +97,11 @@ body {
 #header1 {
     float: left;
     margin-left: 18px;
-    margin-top: 40px;
+    margin-top: 60px;
 }
 
 #para1 {
-    margin-top: 80px;
+    margin-top: 100px;
     margin-left: 220px;
 }
 
@@ -91,13 +110,53 @@ body {
     margin-left: 220px;
 }
 
+#btn h3 {
+    display: inline;
+}
+
+button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
 .picture_box img {
     width: 150px;
     height: auto;
     object-fit: contain;
-    /* position: absolute;
-    left:0px;
-    top:280px; */
+}
+
+.picture_box img:first-child {
+    margin-top: 20px;
+}
+
+.btn {
+    width: 100%;
+    text-align: left;
+    padding: 8px 12px;
+    font-size: 16px;
+    border: none;
+    background: #f2f2f2;
+    cursor: pointer;
+}
+
+#arrow {
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+#arrow.rotate {
+    transform: rotate(180deg);
+}
+
+.img_container {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+}
+
+.img_container.show {
+    max-height: 1000px;
 }
 
 #no-dot {
@@ -105,9 +164,6 @@ body {
 }
 
 #ark {
-    /* position:absolute;
-    left:700px;
-    top:830px; */
     z-index:9999;
 }
 

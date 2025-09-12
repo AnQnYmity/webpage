@@ -16,6 +16,8 @@ function selectRandomMotto() {
 
 const mottoElem = document.getElementById("HEADER_PARA");
 mottoElem.textContent = selectRandomMotto();
+
+
 const link = document.getElementById("playmusic")
 const ark = document.getElementById("ark")
 link.addEventListener("click", 
@@ -33,4 +35,11 @@ chars.forEach((ch, i) => {
     span.style.animationDelay = (i * 0.05) + 's';
     el.appendChild(span);
     });
+});
+
+const container = document.querySelector('.img_container');
+
+btn.addEventListener('click', () => {
+    arrow.classList.toggle('rotate');
+    container.classList.toggle('show');
 });
